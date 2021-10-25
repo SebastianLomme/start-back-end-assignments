@@ -1,12 +1,13 @@
 from helpers import random_koala_fact
 
-__winc_id__ = 'c0dc6e00dfac46aab88296601c32669f'
-__human_name__ = 'while'
+__winc_id__ = "c0dc6e00dfac46aab88296601c32669f"
+__human_name__ = "while"
 
 # This block is only executed if this script is run directly (python main.py)
 # It is not run if you import this file as a module.
-if __name__ == '__main__':
+if __name__ == "__main__":
     (random_koala_fact())
+
 
 def unique_koala_facts(int):
     # make een lijst van alle random fact die al eens geweest zijn
@@ -17,19 +18,21 @@ def unique_koala_facts(int):
     count = 0
     while i < int and count < 1000:
         fact = random_koala_fact()
-        if  fact not in past_list:
+        if fact not in past_list:
             past_list.append(fact)
             i += 1
         else:
             count += 1
     return past_list
 
+
 # unique_koala_facts(100)
+
 
 def num_joey_facts():
     # tel het aantal unique fact met het woord joeys erin
     # laat de loop lopen totdat de eerste fact 10 keer is herhaald
-    
+
     count_fact = 0
     fact_joeys = []
     while count_fact < 10:
@@ -43,7 +46,7 @@ def num_joey_facts():
     else:
         print(count_fact)
         return len(fact_joeys)
-        
+
 
 def koala_weight():
     kg = 0
@@ -52,8 +55,8 @@ def koala_weight():
         if "kg" not in fact.lower():
             continue
         else:
-            number= fact.find("kg")
-            number_of_kg = int(fact[number-2:number])
+            number = fact.find("kg")
+            number_of_kg = int(fact[number - 2: number])
             return number_of_kg
 
 

@@ -55,4 +55,3 @@ def farm_action(
         return "take cows to cowshed\nmow grass\ntake cows back to pasture"
     else:
         return "wait"
-

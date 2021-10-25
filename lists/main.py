@@ -39,4 +39,3 @@ def remove_toto_albums(albums):
             filtered.append(album)
     print(filtered)
     return filtered
-
